@@ -8,18 +8,20 @@ class ContainerData extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            dataList: EventName() 
+            dataList: EventName(),
+            
         };
         // bind event handler on delete sama yang add data
         this.onDeleteHandler = this.onDeleteHandler.bind(this);
         this.onAddDataHandler = this.onAddDataHandler.bind(this);
+        
     }
     onDeleteHandler(id) {
         const dataList = this.state.dataList.filter(event => event.id !== id);
         this.setState({ dataList });
-      }
+    }
     
-    onAddDataHandler({ date, name, location, info }) {
+    onAddDataHandler({ date, nama, location, info }) {
         this.setState(prevState => {
             return {
                 dataList: [
@@ -27,7 +29,7 @@ class ContainerData extends React.Component {
                     {
                         id: +new Date(),
                         date,
-                        name,
+                        nama,
                         location,
                         info,
                     }
@@ -35,12 +37,20 @@ class ContainerData extends React.Component {
             };
         });
     }
+
+    
     render() {
         return (
           <div>
-            <div className="title-event">Event Calendar</div>
-            <InputData addData={this.onAddDataHandler} />
-            <List dataList={this.state.dataList} onDelete={this.onDeleteHandler} />
+            <div className="title-event">⋆ ˚｡⋆୨ ♡ Event Calendar ♡ ୧⋆ ˚｡⋆</div>
+      
+        <>
+          <InputData addData={this.onAddDataHandler} />
+          <List
+            dataList={this.state.dataList} onDelete={this.onDeleteHandler}
+          />
+        </>
+      
           </div>
         );
     }

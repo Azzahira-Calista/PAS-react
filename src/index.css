@@ -1,24 +1,33 @@
 * {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* background-color: #C393A1; */
 }
+
 .title-event{
   font-size: 50px;
   font-weight: bold;
   text-align: center;
   margin: 2rem;
+  color: #C393A1;
 }
 .input-new-event{  
   border: 1px solid #D9D9D9;
-  background-color: #D9D9D9;
+  background-color: #FFCED1;
   border-radius: 20px;
   margin-left: 260px;
   margin-right: 260px;
+  display: flex;
+  flex-direction: column;
 }
+
 .input-date{
   margin-top:20px;
-  width: 100%;
+  width: 90%;
   height: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
   border-radius: 5px;
+  border-color: #C393A1;
 }
 
 .input-name{
@@ -28,6 +37,7 @@
   margin-left: 30px;
   margin-right: 30px;
   border-radius: 5px;
+  border-color: #C393A1
 }
 
 .input-location{
@@ -37,6 +47,7 @@
   margin-left: 30px;
   margin-right: 30px;
   border-radius: 5px;
+  border-color: #C393A1
 }
 
 .input-info{
@@ -46,7 +57,9 @@
   margin-left: 30px;
   margin-right: 30px;
   border-radius: 5px;
+  border-color: #C393A1
 }
+
 
 .addButton{
   width: 50%;
@@ -55,6 +68,8 @@
   margin-left: 250px;
   margin-top:20px;
   margin-bottom: 20px;
+  border-color: #C393A1;
+  background-color: #FFFF;
 
   /* text-align: center;
   width: 50%;
@@ -69,37 +84,29 @@
 
 .container{
   display: flexbox;
-  background-color: #D9D9D9;
+  background-color: #FFCED1;
   box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
   width: 250px;
-  height: 300px;
+  height: 350px;
   padding: 2px 16px;
   margin-top: 50px;
-  margin-left: 50px;
-  border-radius: 10px;
+  margin-right: 30px;
+  border-radius: 20px;
   flex-direction: column;
 }
 
-.container-event{
+/* .container-event{
   display: flexbox;
   flex-direction: column;
-}
+} */
 
-.input-new-event{
-  display: flex;
-  flex-direction: column;
-}
-
-.input-date{
-  width: 90%;
-  margin-left: 30px;
-  margin-right: 30px;
-}
 
 .event-date{
   margin-top: 20px;
-  font-size: 15px;
-  font-weight: bold;}
+  font-size: 20px;
+  font-weight: bold;
+
+}
 
 .event-name{
   margin-top: 20px;
@@ -107,22 +114,37 @@
 
 .event-location{
   margin-top: 20px;
-  width: 1000px;
+  width: 250px;
 }
 
 .event-info{
   margin-top: 20px;
-  width: 100%;
+  width: 250;
 
 }
 
 .data-list{
-  display: inline-flex;
+  /* display: inline-flex; */
+  display: grid;
+  grid-template-columns: auto auto auto auto;
   margin-left: 100px;
   
 }
 
 .btnDelete {
   border-radius: 40px;
+  border-color: #F29191;
+  background-color: #F29191;
   width: 10%;
+  text-align: right;
+  margin-top: 20px;
+  margin-left: 220px;
 }
+
+.no-data{
+  text-align: center;
+  font-size: 30px;
+  color: #C393A1;
+  margin-left: 450px;
+}
+

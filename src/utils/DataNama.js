@@ -2,36 +2,36 @@ const EventName = () => {
     return [
         {
             id : 1,
-            name : "Graduation 2022/2023",
-            date : "May / 20 / 2023",
+            nama : "Graduation 2022/2023",
+            date : "2023-05-20",
             location : "📍Graha ",
             info : "Graduation kelas 12 angkatannya bang rafi dkk"
         },
         {
             id : 2,
-            name : "End Semester Assisment",
-            date : "May / 29 / 2023",
+            nama : "End Semester Assisment",
+            date : "2023-05-29",
             location : "📍SMK Raden Umar Said",
             info : ""
         },
         {
             id : 3,
-            name : "Fun Art Festival Harlah SMK RUS",
-            date : "May / 30 / 2023",
+            nama : "Fun Art Festival Harlah SMK RUS",
+            date : "2023-05-30",
             location : "📍SMK Raden Umar Said",
             info : ""
         },
         {
             id : 4,
-            name : "ClassMeeting",
-            date : "June / 12 / 2023",
+            nama : "ClassMeeting",
+            date : "2023-06-12",
             location : "📍SMK Raden Umar Said",
             info : ""
         },
         {
             id : 5,
-            name : "I can go home",
-            date : "June / 26 / 2023",
+            nama : "I can go home",
+            date : "2023-06-23",
             location : "📍-",
             info : ""
         },

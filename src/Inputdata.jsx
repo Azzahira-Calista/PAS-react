@@ -5,7 +5,7 @@ class InputData extends React.Component {
         super(props);
         this.state = {
             date: "",
-            name: "",
+            nama: "",
             location: "",
             info: "",
         };
@@ -25,33 +25,46 @@ class InputData extends React.Component {
 
     onNameChangeEventHandler(event) {
         this.setState({
-            date: event.target.value
+            nama: event.target.value
         });
     }
 
     onLocationChangeEventHandler(event) {
         this.setState({
-            date: event.target.value
+            location: event.target.value
         });
     }
 
     onInfoChangeEventHandler(event) {
         this.setState({
-            date: event.target.value
+            info: event.target.value
         });
     }
 
     onSubmitEventHandler(event) {
         event.preventDefault();
         this.props.addData(this.state);
-        // clear columns
-        this.setState({
-          date: "",
-          name: "",
-          location: "",
-          info: ""
-        });
-      }
+        // hrusny clear column kl gabisa brrti berak
+        this.setState(() => {
+            return{
+                date: "",
+                nama: "",
+                location: "",
+                info: "",
+            }
+        })
+    }
+    // {
+    //     event.preventDefault();
+    //     this.props.addData(this.state);
+    //     // clear columns
+    //     this.setState({
+    //       date: "",
+    //       nama: "",
+    //       location:  "",
+    //       info: ""
+    //     });
+    //   }
 
       render () {
         return (
@@ -61,7 +74,7 @@ class InputData extends React.Component {
                     className="input-date"
                     type="date"
                     placeholder="Input date"
-                    value={this.setState.date}
+                    value={this.state.date}
                     onChange={this.onDateChangeEventHandler}/>
                 </div>
 
@@ -70,7 +83,7 @@ class InputData extends React.Component {
                     className="input-name"
                     type="text"
                     placeholder="Input event name"
-                    value={this.setState.name}
+                    value={this.state.nama}
                     onChange={this.onNameChangeEventHandler}/>
                 </div>
 
@@ -79,7 +92,7 @@ class InputData extends React.Component {
                     className="input-location"
                     type="text"
                     placeholder="Input location"
-                    value={this.setState.location}
+                    value={this.state.location}
                     onChange={this.onLocationChangeEventHandler}/>
                 </div>
 
@@ -88,7 +101,7 @@ class InputData extends React.Component {
                     className="input-info"
                     type="text"
                     placeholder="Input more information"
-                    value={this.setState.info}
+                    value={this.state.info}
                     onChange={this.onInfoChangeEventHandler}/>
                 </div>
 
