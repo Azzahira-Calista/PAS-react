@@ -132,13 +132,17 @@
 }
 
 .btnDelete {
-  border-radius: 40px;
+  border-radius: 50%;
   border-color: #F29191;
-  background-color: #F29191;
   width: 10%;
-  text-align: right;
+  text-align: center;
   margin-top: 20px;
   margin-left: 220px;
+}
+
+.btnDelete:hover{
+  background-color: #F29191;
+
 }
 
 .no-data{
@@ -148,3 +152,24 @@
   margin-left: 450px;
 }
 
+ul li{
+  list-style: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(./img/unchecked.png);
+  background-size: cover;
+  background-position: center;
+}
+
+ul li.checked::before{
+  background-image: url(./img/checked.png);
+
+}
